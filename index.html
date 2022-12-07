@@ -11,12 +11,53 @@
     let user;
     let comp;
     let answer = prompt("Rock, Paper or Scissors?");
+     
+
+     user = answer.toUpperCase();
+     
      getComputerChoice(random);
      
-     
-     console.log(answer);
+     playRound(user, comp);
 
+    function playRound(player, computer) {
+        if ( player == computer) {
+            console.log("It's a tie!");
+        }
+        else if (player == 'ROCK'){
+            switch(computer) {
+                case 'PAPER':
+                console.log ("You Lose!");
+                break;
+                case 'SCISSORS':
+                console.log ("You Win!");
+                break;     
+            }
+        }
+        else if (player == 'PAPER'){
+            switch(computer) {
+                case 'ROCK':
+                console.log ("You Win!");
+                break;
+                case 'SCISSORS':
+                console.log ("You lose!");
+                break;   
+        }
+    }
 
+        else if (player == 'SCISSORS'){
+            switch(computer) {
+                case 'PAPER':
+                console.log ("You win!");
+                break;
+                case 'ROCK':
+                console.log ("You Lose");
+                break;   
+        }
+       
+    }
+}
+
+    
 
     function getComputerChoice (num) {
 
