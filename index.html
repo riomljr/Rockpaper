@@ -39,8 +39,6 @@ const cons = document.querySelector('body');
     
     
      function Playgame (e){
-        //clearDivs();
-        clearResults;
 
         user = e.target.id;
         outcome = game();
@@ -54,8 +52,8 @@ const cons = document.querySelector('body');
             case "It's a tie!":
                 break;
         }
-        //console.log(Pscore);
         showResults();
+        
         if (Cscore== 5 || Pscore == 5) {
             alert("We have a winnder!");
         }
@@ -132,7 +130,7 @@ const cons = document.querySelector('body');
         const result = document.querySelector('.Result');
        
         result.innerHTML = "The outcome is: " + outcome;
-        result.style.cssText = "background: pink;"
+        
 
         const score = document.querySelector('.scores');
         score.innerHTML = "Computer= " + Cscore + " " + "Player= " +Pscore;
@@ -142,15 +140,6 @@ const cons = document.querySelector('body');
 
     }
 
-    function clearResults () {
-
-        const result = document.querySelector('.Result');
-        newText = originalText.replace("The outcome is: " + outcome, '');
-
-        const score = document.querySelector('.scores');
-        newText = originalText.replace("Computer= " + Cscore + " " + "Player= " +Pscore, '');
-
-    }
 
    
 
